@@ -7,16 +7,25 @@ $(function(){
 
       if($(this).data('link')){
 
-        $(this).parent().closest('ul').hide('slide',{direction:'right'},500)
-        $("ul#"+$(this).data('link')).show('slide',{direction:'right'},500)
+        $(".active").hide('slide',{direction:'right'},500)
+        $(".active").removeClass("active")
+        var obj = $(this)
+        setTimeout(function(){
+          $("#"+obj.data('link')).show('slide',{direction:'right'},500);
+        }, 600);
+        $("#"+$(this).data('link')).addClass("active")
 
       }
 
   })
 
   $(".ret").click(function(){
-    $("ul").hide('slide',{direction:'right'},500)
-    $("ul#main").show('slide',{direction:'right'},500)
+    $(".active").hide('slide',{direction:'right'},500)
+    $(".active").removeClass("active")
+    setTimeout(function(){
+      $("#main").show('slide',{direction:'right'},500)      
+    }, 600)
+    $("#main").addClass("active")
   })
 
 })
