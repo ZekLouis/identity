@@ -1,0 +1,28 @@
+H1 Gestion du véhicule
+
+Que voulez vous faire ?
+- Vérouiller / Dévérouiller le véhicule
+- Gérer le coffre
+- Gérer les portes
+- Quitter
+
+Coffre :
+- Déposer un objet/arme
+- Récupérer obket  arme
+- Consulter le coffre
+
+Portes :
+- Coffre
+- Capot
+- Porte AV Gauche
+- Porte AV Droite
+- Porte AR Gauche
+- Porte AR Droite
+
+
+
+
+
+
+
+Système de notif déroulante avec menu qui se ferme

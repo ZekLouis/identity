@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="FR">
+<head>
+  <meta charset="UTF-8">  
+      <link rel="stylesheet" href="css/style.css">
+</head>
+  <body>
+	<nav class="accordion arrows">
+		<header class="box">
+			<label for="acc-close" class="box-title">Choix des vêtements</label>
+		</header>
+		<input type="radio" name="accordion" id="cb1" />
+		<section class="box">
+			<label class="box-title" for="cb1">Haut du corps</label>
+			<label class="box-close" for="acc-close"></label>
+			<div class="box-content">
+			<p id="top">Choix du haut</p>
+			<input id="r_Draw11" type="range" min="0" max="205" value="0" step="1" onchange="resourceCall('commitHabit', 11,this.value)" /><br>
+				<p id="topType">Texture du haut</p>
+				
+				<input id="r_Type11" type="range" min="0" max="10" value="0" step="1" onchange="resourceCall('commitHabitType', 11,this.value)" /><br>
+				
+				<p id="top2">Choix du second haut</p>
+				<input id="r_Draw118" type="range" min="0" max="85" value="0" step="1" onchange="resourceCall('commitHabit', 8,this.value)" /><br>
+				<p id="top2Type">Texture du second haut</p>
+				
+				<input id="r_Type8" type="range" min="0" max="10" value="0" step="1" onchange="resourceCall('commitHabitType', 8, this.value)" /><br>
+			</div>
+		</section>
+		<input type="radio" name="accordion" id="cb2" />
+		<section class="box">
+			<label class="box-title" for="cb2">Bas du corps</label>
+			<label class="box-close" for="acc-close"></label>
+			<div class="box-content">
+			<p id="legs">Choix du pantalon</p>
+				<input id="r_Draw4" type="range" min="0" max="61" value="0" step="1" onchange="resourceCall('commitHabit', 4,this.value)" /><br>
+				<p id="legsType">Texture du pantalon </p>
+				<input id="r_Type4" type="range" min="0" max="10" value="0" step="1" onchange="resourceCall('commitHabitType', 4, this.value)" /><br>
+			</div>
+		</section>
+		<input type="radio" name="accordion" id="cb3" />
+		<section class="box">
+			<label class="box-title" for="cb3">Chaussures</label>
+			<label class="box-close" for="acc-close"></label>
+			<div class="box-content">
+				<p id="feet">Choix des chaussures</p>
+				<input id="r_Draw6" type="range" min="0" max="58" value="0" step="1" onchange="resourceCall('commitHabit', 6,this.value)" /><br>
+				<p id="feetType">Texture des chaussure</p>
+				<input id="r_Type6" type="range" min="0" max="10" value="0" step="1" onchange="resourceCall('commitHabitType', 6, this.value)" /><br>
+			</div>
+		</section>
+		<input type="radio" name="accordion" id="cb4" />
+		<section class="box">
+			<div class="rotate">
+		<label>Rotation du personnage</label><br><br>
+				<input id="rotation" type="range" min="0" max="360" value="0" step="1" oninput="resourceCall('changePlayerRotation', this.value)" /><br>
+				</div>
+		</section>
+		<section class="box">
+			<div class="footer">
+				<button id="submit2" class="button button3">Reset</button>
+				<button id="submit" class="button">Valider</button>
+			</div>
+		</section>
+		<input type="radio" name="accordion" id="acc-close" />
+	</nav>
+	<script type="text/javascript">
+		document.getElementById("submit").addEventListener("click", function () { resourceCall("validerPersonnage"); });
+			document.getElementById("submit2").addEventListener("click", function () { resourceCall("resetPersonnage"); });
+		
+			function maxValueHabitType(type, count){ document.getElementById('r_Type'+type).max = count; }
+			function maxValueHabitDrawable(type, count){ document.getElementById('r_Draw'+type).max = count; }
+		
+			//function commitFeatureType(type, newValue){ resourceCall("commitFeatureType", type ,newValue);}
+	</script>
+</body>
+</html>

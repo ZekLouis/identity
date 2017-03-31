@@ -1,0 +1,196 @@
+@font-face {
+    font-family: Montserrat;
+    src: url("../fonts/Montserrat-Regular.otf") format("opentype");
+}
+
+body {
+   font-family: 'Montserrat', sans-serif;
+   font-size: 14px;
+   color: #333;
+   background-color: transparent;
+   overflow: hidden;
+}
+
+.logo {
+   position: absolute;
+   left: 45px;
+   top: -195px;
+   z-index: 99;
+}
+
+.block {
+   position: relative;
+   top: 280px;
+   box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 6px;
+   float: right;
+   width: 430px;
+   max-width: 480px;
+}
+
+.block-title {
+   background-color: rgba(11, 8, 6, 0.8);
+   padding: 12px;
+}
+
+h1 {
+   font-size: 19px;
+   color: #FFFFFF;
+   margin: 0;
+}
+
+.block-body {
+   background-color: rgba(255, 255, 255, 1.00);
+   padding: 15px;
+   color: #404040;
+   line-height: 25px;
+   overflow: hidden;
+}
+
+li {
+   list-style: none;
+   margin-top: 10px;
+}
+
+ul {
+   padding: 0;
+   margin: 0;
+}
+
+input[type="text"], input[type="password"], input[type="age"], input[type="prenomnom"], input[type="date"], input[type="parrain"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   width: 100%;
+   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+   display: block;
+   font-family: inherit;
+   font-size: 14px;
+   border-radius: 0;
+   height: 40px;
+   border: 1px solid #c7c3b4;
+   background-color: #fff;
+   margin: 0 auto;
+   padding: 0.5rem;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   -webkit-transition: border-color 0.15s linear, background 0.15s linear;
+   -moz-transition: border-color 0.15s linear, background 0.15s linear;
+   -ms-transition: border-color 0.15s linear, background 0.15s linear;
+   -o-transition: border-color 0.15s linear, background 0.15s linear;
+   transition: border-color 0.15s linear, background 0.15s linear;
+}
+
+.uppercase {
+   text-transform: uppercase;
+}
+
+.bold {
+   font-weight: bold;
+}
+
+.fa {
+   margin-right: 5px;
+}
+
+.btn {
+   border: 2px solid #398ac3;
+   padding: 0 26px;
+   height: 40px;
+   width: 100%;
+   min-width: 150px;
+   line-height: 36px;
+   font-size: 12px;
+   font-weight: 700;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   border-radius: 0;
+   background: #fff;
+   color: #398ac3 !important;
+   text-align: center;
+   transition: all 0.3s ease;
+   -webkit-transition: all 0.3s ease;
+   -moz-transition: all 0.3s ease;
+   margin-bottom: 8px;
+   margin-top: 8px;
+   cursor: pointer;
+}
+
+.btn:hover {
+   background: #398ac3 !important;
+   color: #fff !important;
+}
+
+.btn-filled {
+   background: #398ac3;
+   border-color: #398ac3;
+   color: #fff !important;
+}
+
+.btn-filled:hover {
+   border-color: #398ac3 !important;
+   background: #fff !important;
+   color: #398ac3 !important;
+}
+
+.btn-secondary-filled {
+   background: rgb(229, 105, 44) !important;
+   border-color: rgb(229, 105, 44) !important;
+   color: #fff !important;
+}
+
+.btn-secondary-filled:hover {
+   border-color: rgb(229, 105, 44) !important;
+   background: #fff !important;
+   color: rgb(229, 105, 44) !important;
+}
+
+li.inline {
+   display: flex;
+   justify-content: space-between;
+   flex-direction: row;
+}
+
+.center {
+   text-align: center;
+}
+
+p {
+   font-size: 13px;
+}
+
+.orange {
+   background: rgb(192, 192, 192) !important;
+   border-color: rgb(192, 192, 192) !important;
+   color: #000000 !important;
+   padding: 0px;
+}
+
+
+
+.isa_info, .isa_success, .isa_warning, .isa_error {
+margin: 10px 0px;
+padding:12px;
+width:100%;
+
+}
+.isa_info {
+	color: #00529B;
+	background-color: #BDE5F8;
+}
+.isa_success {
+	color: #4F8A10;
+	background-color: #DFF2BF;
+}
+.isa_warning {
+	color: #9F6000;
+	background-color: #FEEFB3;
+}
+.isa_error {
+	color: #D8000C;
+	background-color: #FFBABA;
+}
+.isa_info i, .isa_success i, .isa_warning i, .isa_error i {
+	margin:10px 22px;
+	font-size:2em;
+	vertical-align:middle;
+}

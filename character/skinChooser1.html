@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="FR">
+<head>
+  <meta charset="UTF-8">  
+      <link rel="stylesheet" href="css/style.css">
+</head>
+  <body>
+	<nav class="accordion arrows">
+		<header class="box">
+			<label for="acc-close" class="box-title">Création du personnage</label>
+		</header>
+		<input type="radio" name="accordion" id="cb3" />
+		<section class="box">
+			<label class="box-title" for="cb3">Visage</label>
+			<label class="box-close" for="acc-close"></label>
+			<div class="box-content">
+				<p id="head1">Visage du père</p>
+				<input id="r_head1" type="range" min="0" max="20" value="0" step="1" onchange="updateMenHead(this.value)" /><br>
+				<p id="head2">Visage de la mère</p>
+				<input id="r_head2" type="range" min="21" max="43" value="0" step="1" onchange="updateWomenHead(this.value)" /><br>
+				<p id="range1">Mixe du visage père et mère</p>
+				<input id="r_range1" type="range" min="0" max="100" value="0" step="0.5" onchange="updateMix(this.value)" /><br>
+			</div>
+		</section>
+		<input type="radio" name="accordion" id="cb1" />
+		<section class="box">
+			<label class="box-title" for="cb1">Mixe de la couleur de peau</label>
+			<label class="box-close" for="acc-close"></label>
+			<div class="box-content">
+			<input id="r_range2" type="range" min="0" max="100" value="0" step="0.5" onchange="updateMix2(this.value)" />
+			</div>
+		</section>
+		<section class="box">
+			<div class="footer">
+				<button id="submit2" class="button button3">Reset</button>
+				<button id="submit" class="button">Valider</button>
+			</div>
+		</section>
+		<input type="radio" name="accordion" id="acc-close" />
+	</nav>
+	<script type="text/javascript">
+		document.getElementById("submit").addEventListener("click", function () { resourceCall("validerPersonnage"); });
+		document.getElementById("submit2").addEventListener("click", function () { resourceCall("resetPersonnage"); });
+
+		function updateMenHead(newValue){ resourceCall("commitHead1", newValue); }
+		function updateWomenHead(newValue){ resourceCall("commitHead2", newValue); }
+		function updateMix(newValue){ resourceCall("commitRange1", newValue); }
+		function updateMix2(newValue){ resourceCall("commitRange2", newValue); }
+	</script>
+</body>
+</html>
