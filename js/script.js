@@ -16,6 +16,15 @@ function errorMessage(message){
   }, 3000)
 }
 
+function infoMessage(message){
+  $(".isa_info").slideDown(300);
+  $(".isa_info>span").text(message)
+
+  setTimeout(function(){
+    $(".isa_info").slideUp(300);
+  }, 3000)
+}
+
 $(function(){
   // Si on voit trop les autres menus
   $("#coffre").hide()
@@ -23,7 +32,6 @@ $(function(){
   $(".isa").hide()
 
   $(".btn").not(".ret").click(function(){
-    console.log("zaereazr");
       switch ($(this).data('link')) {
         case 'close':
           $(".block").hide('slide',{direction:'right'},500)
@@ -42,7 +50,7 @@ $(function(){
           break;
 
         case 'watchTrunk':
-          successMessage("Le coffre est vide")
+          infoMessage("Le coffre est vide")
           break;
 
         case 'trunk':
