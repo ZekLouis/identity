@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Gest Car</title>
-    <link rel="stylesheet" href="css/gestCar.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/gestCar.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <script src="js/jquery.min.js" charset="utf-8"></script>
     <script src="js/jquery-ui.min.js" charset="utf-8"></script>
     <script src="js/bootstrap.min.js" charset="utf-8"></script>
@@ -13,32 +14,37 @@
   <body>
     <div class="block">
       <div class="block-title">
-        <h1 class="center uppercase">Gestion du véhicule</h1>
+        <h1 class="center uppercase"><i class="fa fa-car"></i> Gestion du véhicule</h1>
       </div>
       <div class="block-body" style="background-color: rgba(255, 255, 255, 0.90) !important;">
         <ul class="active" id="main">
-          <li class="inline"><button class="btn btn-filled">Vérouiller ou Dévérouiller le véhicule</button></li>
+          <li class="inline"><button data-link="verVeh" class="btn btn-filled">Verrouiller ou Déverrouiller le véhicule</button></li>
           <li class="inline"><button data-link="portes" class="btn btn-filled">Gérer les portes</button></li>
           <li class="inline"><button data-link="coffre" class="btn btn-filled">Gérer le coffre</button></li>
           <li class="inline"><button data-link="close" class="btn ret btn-filled">Sortir du menu</button></li>
         </ul>
 
         <ul id="coffre">
-          <li class="inline"><button class="btn btn-filled">Déposer un objet ou une arme</button></li>
-          <li class="inline"><button class="btn btn-filled">Récupérer un objet ou une arme</button></li>
-          <li class="inline"><button class="btn btn-filled">Consuler le coffre</button></li>
+          <li class="inline"><button data-link="putObj" class="btn btn-filled">Déposer un objet ou une arme</button></li>
+          <li class="inline"><button data-link="getObj" class="btn btn-filled">Récupérer un objet ou une arme</button></li>
+          <li class="inline"><button data-link="watchTrunk" class="btn btn-filled">Consuler le coffre</button></li>
           <li class="inline"><button class="btn ret btn-filled">Retour</button></li>
         </ul>
 
         <ul id="portes">
-          <li class="inline"><button class="btn btn-filled">Ouvrir ou fermer le coffre</button></li>
-          <li class="inline"><button class="btn btn-filled">Ouvrir ou fermer le capot</button></li>
-          <li class="inline"><button class="btn btn-filled">Ouvrir ou fermer la porte AV Gauche</button></li>
-          <li class="inline"><button class="btn btn-filled">Ouvrir ou fermer la porte AV Droite</button></li>
-          <li class="inline"><button class="btn btn-filled">Ouvrir ou fermer la porte AR Gauche</button></li>
-          <li class="inline"><button class="btn btn-filled">Ouvrir ou fermer la porte AR Droite</button></li>
+          <li class="inline"><button data-link="trunk" class="btn btn-filled">Ouvrir ou fermer le coffre</button></li>
+          <li class="inline"><button data-link="hood" class="btn btn-filled">Ouvrir ou fermer le capot</button></li>
+          <li class="inline"><button data-link="doorAVLeft" class="btn btn-filled">Ouvrir ou fermer la porte AV Gauche</button></li>
+          <li class="inline"><button data-link="doorAVRight" class="btn btn-filled">Ouvrir ou fermer la porte AV Droite</button></li>
+          <li class="inline"><button data-link="doorARLeft" class="btn btn-filled">Ouvrir ou fermer la porte AR Gauche</button></li>
+          <li class="inline"><button data-link="doorARRight" class="btn btn-filled">Ouvrir ou fermer la porte AR Droite</button></li>
           <li class="inline"><button class="btn ret btn-filled">Retour</button></li>
         </ul>
+
+        <div id="returnMessage" class="inline">
+					<div id="messageError" class="isa isa_error"><i class="fa fa-times-circle"></i><span id="messageErrorSpan"></span></div>
+					<div id="messageSucess" class="isa isa_success"><i class="fa fa-check"></i><span id="messageSucessSpan"></span></div>
+				</div>
       </div>
     </div>
   </body>
