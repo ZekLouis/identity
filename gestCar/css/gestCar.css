@@ -237,3 +237,9 @@ width:100%;
     height: 980%;
     opacity: 1;
 }
+
+.selected{
+  color: #fff;
+  background-color: #3B3937;
+  border: 3px solid #3B3937;
+}
