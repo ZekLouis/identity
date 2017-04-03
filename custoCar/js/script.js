@@ -151,5 +151,29 @@ var colorPicker = (function(){
 }());
 
 $(function(){
-  colorPicker.init();
+  colorPicker.init()
+
+  $('.btn').not(".prev").not(".next").click(function(){
+    switch ($(this).data('link')) {
+      case 'exit':
+        $(".block").slideUp(500)
+        break
+
+      default:
+        $(".selected").removeClass("selected")
+        $(this).addClass("selected")
+        $('#contentDetails>div').hide()
+        $("#"+$(this).data('link')).show();
+    }
+  })
+
+  $('.prev').click(function(){
+    $("#"+$(this).data('link')).text(parseInt($("#"+$(this).data('link')).text())-1)
+  })
+
+  $('.next').click(function(){
+    $("#"+$(this).data('link')).text(parseInt($("#"+$(this).data('link')).text())+1)
+  })
+
+  $('#contentDetails>div').hide()
 })
