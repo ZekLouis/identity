@@ -153,8 +153,66 @@ var colorPicker = (function(){
 
 }());
 
+var selected = false
+var index = 0
+
 $(function(){
   colorPicker.init()
+
+  $(document).keydown(function(e) {
+    console.log(e.which);
+    switch (e.which) {
+      case 13:
+        if(selected){
+          $("li:eq("+index+")>button").trigger("click")
+          if($("li:eq("+index+")>button").hasClass("ret")){
+            index=0
+            $(".selected").removeClass("selected")
+          }else{
+            console.log("sousmenn");
+            if($("li:eq("+index+")>button").data('link')=="coffre"){
+              index=4
+            }else if($("li:eq("+index+")>button").data('link')=="verVeh"){
+              index=0
+              $(".selected").removeClass("selected")
+            }else if($("li:eq("+index+")>button").data('link')=="portes"){
+              index=8
+            }
+            console.log(index);
+          }
+          selected=false
+        }
+        break;
+
+      // UP
+      case 38:
+        if(!selected){
+          $("li:eq("+index+")>button").addClass("selected")
+          selected = true
+        }else{
+          $("li:eq("+index+")>button").removeClass("selected")
+          index--
+          $("li:eq("+index+")>button").addClass("selected")
+        }
+        break;
+
+      // DOWN
+      case 40:
+        console.log(index);
+        if(!selected){
+          $("li:eq("+index+")>button").addClass("selected")
+          selected = true
+        }else{
+          $("li:eq("+index+")>button").removeClass("selected")
+          index++
+          $("li:eq("+index+")>button").addClass("selected")
+        }
+        break;
+
+      default:
+        break;
+    }
+  });
 
   $('.btn').not(".prev").not(".next").click(function(){
     switch ($(this).data('link')) {
