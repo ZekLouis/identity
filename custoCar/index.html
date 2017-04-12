@@ -35,6 +35,12 @@
           <li class="inline"><button data-link="backWheels" class="btn btn-filled">Back Wheels</button></li>
           <li class="inline"><button data-link="windows" class="btn btn-filled">Windows</button></li>
           <li class="inline"><button data-link="misc" class="btn btn-filled">Misc</button></li>
+          <li>
+            <div class="slider">
+              <p>Rotation de la voiture</p>
+              <input type="range" min="0" max="100"/>
+            </div>
+          </li>
           <li class="inline"><button data-link="exit" class="btn ret btn-filled">Exit</button></li>
         </ul>
       </div>
@@ -46,6 +52,7 @@
       </div>
 
       <div id="contentDetails" class="block-body" style="background-color: rgba(255, 255, 255, 0.90) !important;">
+        <p>Selectionnez un element</p>
         <div id="mainBody" class="">
           <div class="color-picker"></div>
         </div>
@@ -57,7 +64,7 @@
                 <button class="btn prev" type="button" data-link="spoilersInt"><i class="fa fa-chevron-left"></i></button>
               </td>
               <td>
-                <p id="spoilersInt" class="btn">5</p>
+                <p id="spoilersInt" class="btn int">5</p>
               </td>
               <td>
                 <button class="btn next" data-link="spoilersInt" type="button"><i class="fa fa-chevron-right"></i></button>
@@ -73,7 +80,7 @@
                 <button class="btn prev" type="button" data-link="frontBumperInt"><i class="fa fa-chevron-left"></i></button>
               </td>
               <td>
-                <p id="frontBumperInt" class="btn">5</p>
+                <p id="frontBumperInt" class="btn int">5</p>
               </td>
               <td>
                 <button class="btn next" data-link="frontBumperInt" type="button"><i class="fa fa-chevron-right"></i></button>
@@ -89,7 +96,7 @@
                 <button class="btn prev" type="button" data-link="rearBumperInt"><i class="fa fa-chevron-left"></i></button>
               </td>
               <td>
-                <p id="rearBumperInt" class="btn">5</p>
+                <p id="rearBumperInt" class="btn int">5</p>
               </td>
               <td>
                 <button class="btn next" data-link="rearBumperInt" type="button"><i class="fa fa-chevron-right"></i></button>
@@ -105,7 +112,7 @@
                 <button class="btn prev" type="button" data-link="sideSkirtsInt"><i class="fa fa-chevron-left"></i></button>
               </td>
               <td>
-                <p id="sideSkirtsInt" class="btn">5</p>
+                <p id="sideSkirtsInt" class="btn int">5</p>
               </td>
               <td>
                 <button class="btn next" data-link="sideSkirtsInt" type="button"><i class="fa fa-chevron-right"></i></button>
@@ -121,7 +128,7 @@
                 <button class="btn prev" type="button" data-link="exhaustInt"><i class="fa fa-chevron-left"></i></button>
               </td>
               <td>
-                <p id="exhaustInt" class="btn">5</p>
+                <p id="exhaustInt" class="btn int">5</p>
               </td>
               <td>
                 <button class="btn next" data-link="exhaustInt" type="button"><i class="fa fa-chevron-right"></i></button>
@@ -137,7 +144,7 @@
                 <button class="btn prev" type="button" data-link="grilleInt"><i class="fa fa-chevron-left"></i></button>
               </td>
               <td>
-                <p id="grilleInt" class="btn">5</p>
+                <p id="grilleInt" class="btn int">5</p>
               </td>
               <td>
                 <button class="btn next" data-link="grilleInt" type="button"><i class="fa fa-chevron-right"></i></button>
@@ -153,7 +160,7 @@
                 <button class="btn prev" type="button" data-link="hoodInt"><i class="fa fa-chevron-left"></i></button>
               </td>
               <td>
-                <p id="hoodInt" class="btn">5</p>
+                <p id="hoodInt" class="btn int">5</p>
               </td>
               <td>
                 <button class="btn next" data-link="hoodInt" type="button"><i class="fa fa-chevron-right"></i></button>
@@ -169,7 +176,7 @@
                 <button class="btn prev" type="button" data-link="frontWheelsInt"><i class="fa fa-chevron-left"></i></button>
               </td>
               <td>
-                <p id="frontWheelsInt" class="btn">5</p>
+                <p id="frontWheelsInt" class="btn int">5</p>
               </td>
               <td>
                 <button class="btn next" data-link="frontWheelsInt" type="button"><i class="fa fa-chevron-right"></i></button>
@@ -185,7 +192,7 @@
                 <button class="btn prev" type="button" data-link="backWheelsInt"><i class="fa fa-chevron-left"></i></button>
               </td>
               <td>
-                <p id="backWheelsInt" class="btn">5</p>
+                <p id="backWheelsInt" class="btn int">5</p>
               </td>
               <td>
                 <button class="btn next" data-link="backWheelsInt" type="button"><i class="fa fa-chevron-right"></i></button>
@@ -201,7 +208,7 @@
                 <button class="btn prev" type="button" data-link="windowsInt"><i class="fa fa-chevron-left"></i></button>
               </td>
               <td>
-                <p id="windowsInt" class="btn">5</p>
+                <p id="windowsInt" class="btn int">5</p>
               </td>
               <td>
                 <button class="btn next" data-link="windowsInt" type="button"><i class="fa fa-chevron-right"></i></button>
@@ -217,7 +224,7 @@
                 <button class="btn prev" type="button" data-link="miscInt"><i class="fa fa-chevron-left"></i></button>
               </td>
               <td>
-                <p id="miscInt" class="btn">5</p>
+                <p id="miscInt" class="btn int">5</p>
               </td>
               <td>
                 <button class="btn next" data-link="miscInt" type="button"><i class="fa fa-chevron-right"></i></button>
@@ -233,7 +240,7 @@
                 <button class="btn prev" type="button" data-link="fenderInt"><i class="fa fa-chevron-left"></i></button>
               </td>
               <td>
-                <p id="fenderInt" class="btn">5</p>
+                <p id="fenderInt" class="btn int">5</p>
               </td>
               <td>
                 <button class="btn next" data-link="fenderInt" type="button"><i class="fa fa-chevron-right"></i></button>
@@ -249,7 +256,7 @@
                 <button class="btn prev" type="button" data-link="roofInt"><i class="fa fa-chevron-left"></i></button>
               </td>
               <td>
-                <p id="roofInt" class="btn">5</p>
+                <p id="roofInt" class="btn int">5</p>
               </td>
               <td>
                 <button class="btn next" data-link="roofInt" type="button"><i class="fa fa-chevron-right"></i></button>
@@ -264,6 +271,10 @@
       <div class="block-title">
         <h1 class="center uppercase">Modification de vehicule<i class="fa fa-car"></i></h1>
       </div>
+    </div>
+
+    <div class="block-slider block-center">
+      
     </div>
   </body>
 </html>
