@@ -215,6 +215,7 @@ $(function(){
   });
 
   $('.btn').not(".prev").not(".next").click(function(){
+		
     switch ($(this).data('link')) {
       case 'exit':
         $(".block").slideUp(500)
@@ -224,6 +225,7 @@ $(function(){
         $(".selected").removeClass("selected")
         $(this).addClass("selected")
         $('#contentDetails>div').hide()
+        $('#contentDetails>p').hide()
         $("#"+$(this).data('link')).show();
     }
   })

@@ -24,7 +24,6 @@ function infoMessage(message){
     $(".isa_info").slideUp(300);
   }, 3000)
 }
-
 var selected = false
 var index = 0
 
@@ -35,53 +34,34 @@ $(function(){
   $(".isa").hide()
 
   $(document).keydown(function(e) {
-    console.log(e.which);
+    console.log(index)
     switch (e.which) {
       case 13:
-        if(selected){
-          $("li:eq("+index+")>button").trigger("click")
-          if($("li:eq("+index+")>button").hasClass("ret")){
-            index=0
-            $(".selected").removeClass("selected")
-          }else{
-            console.log("sousmenn");
-            if($("li:eq("+index+")>button").data('link')=="coffre"){
-              index=4
-            }else if($("li:eq("+index+")>button").data('link')=="verVeh"){
-              index=0
-              $(".selected").removeClass("selected")
-            }else if($("li:eq("+index+")>button").data('link')=="portes"){
-              index=8
-            }
-            console.log(index);
-          }
-          selected=false
-        }
+
         break;
 
       // UP
       case 38:
-        if(!selected){
-          $("li:eq("+index+")>button").addClass("selected")
-          selected = true
+        if(selected){
+          li = $(".selected").parent("li").prev().children("button");
+          $(".selected").removeClass("selected");
+          li.addClass("selected");
         }else{
-          $("li:eq("+index+")>button").removeClass("selected")
-          index--
-          $("li:eq("+index+")>button").addClass("selected")
+          $("ul.active li>button").first().addClass('selected');
         }
+        selected = true
         break;
 
       // DOWN
       case 40:
-        console.log(index);
-        if(!selected){
-          $("li:eq("+index+")>button").addClass("selected")
-          selected = true
+        if(selected){
+          li = $(".selected").parent("li").next().children("button");
+          $(".selected").removeClass("selected");
+          li.addClass("selected");
         }else{
-          $("li:eq("+index+")>button").removeClass("selected")
-          index++
-          $("li:eq("+index+")>button").addClass("selected")
+          $("ul.active li>button").first().addClass('selected');
         }
+        selected = true
         break;
 
       default:

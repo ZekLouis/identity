@@ -2,6 +2,9 @@
     font-family: Montserrat;
     src: url("../fonts/Montserrat-Regular.otf") format("opentype");
 }
+html{
+  height: 100%;
+}
 
 body {
    font-family: 'Montserrat', sans-serif;
@@ -9,6 +12,7 @@ body {
    color: #333;
    background-color: transparent;
    overflow: hidden;
+   height:100%;
 }
 
 .logo {
@@ -23,7 +27,6 @@ body {
    box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 6px;
    width: 315px;
    max-width: 480px;
-   height: 100%;
 }
 
 .left{
@@ -172,6 +175,7 @@ width:100%;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
+    box-sizing: border-box;
 }
 
 .btn:after {
@@ -309,4 +313,45 @@ table{
 
 table td{
   margin: 5px;
+}
+
+.slider{
+  width: 100%;
+  margin: 10px auto;
+}
+
+.slider>p{
+  text-align: center;
+}
+
+input[type="range"]{
+  -webkit-appearance: none !important /*Needed to reset default slider styles */;
+  width: 100%;
+  height: 15px;
+  background-color: #A3CD99;
+  border: 1px solid darken(#A3CD99, 4%);
+  border-radius: 10px;
+  margin: auto;
+  transition: all 0.3s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+  -webkit-appearance: none !important;
+  width: 20px;
+  height: 20px;
+  background-color: #579E81;
+  border-radius: 30px;
+  box-shadow: 0px 0px 3px #579E81;
+  transition: all 0.5s ease;
+}
+
+#rangevalue{
+  text-align: center;
+  font-family: 'Quantico', sans-serif;
+  font-size: 18px;
+  display: block;
+  margin: auto;
+  padding: 10px 0px ;
+  width: 100%;
+  color: #579E81;
 }
