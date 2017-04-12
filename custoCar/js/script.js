@@ -1,3 +1,7 @@
+var state = {
+		activeColor: [0, 0, 0]
+	};
+
 var colorPicker = (function(){
 
 	var config = {
@@ -18,10 +22,6 @@ var colorPicker = (function(){
 		transitionDuration: 200,
 		transitionDelay: 25,
 		variationTotal: 10
-	};
-
-	var state = {
-		activeColor: [0, 0, 0]
 	};
 
 	function init(){
@@ -157,7 +157,7 @@ var selected = false
 var index = 0
 
 $(function(){
-  colorPicker.init()
+  colorP = colorPicker.init()
 
   $(document).keydown(function(e) {
     console.log(e.which);
